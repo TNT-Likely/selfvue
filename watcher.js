@@ -12,7 +12,7 @@ Watcher.prototype = {
     this.run()
   },
   run: function () {
-    let value = this.vm.data[this.key]
+    let value = this.vm[this.key]
     let oldVal = this.value
     if (value !== oldVal) {
       this.value = value
@@ -21,7 +21,7 @@ Watcher.prototype = {
   },
   get: function () {
     Dep.target = this
-    let value = this.vm.data[this.key]
+    let value = this.vm[this.key]
     Dep.target = null
     return value
   }

@@ -1,7 +1,13 @@
 <html>
   <head></head>
   <body>
-    <h1 id="name">{{name}}</h1>
+    <div id="app">
+      <input v-mode="name" />
+      <h1>{{title}}</h1>
+      <h1>{{name}}</h1>
+      <h3>{{content}}</h3>
+      <button v-on:click="say">click me</button>
+    </div>
     <script src="index.js"></script>  
   </body>
 </html>
